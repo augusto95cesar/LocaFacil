@@ -1,0 +1,66 @@
+﻿@model LocaFacilWeb.Models.Entity.Locacao
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Locacao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Filme.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Filme.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataAluguel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataAluguel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Devolução)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Devolução)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorDiaAluguel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorDiaAluguel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalAluguel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalAluguel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

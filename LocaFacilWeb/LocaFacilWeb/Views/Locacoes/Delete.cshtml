@@ -1,0 +1,72 @@
+﻿@model LocaFacilWeb.Models.Entity.Locacao
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Locacao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Filme.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Filme.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataAluguel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataAluguel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Devolução)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Devolução)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorDiaAluguel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorDiaAluguel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalAluguel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalAluguel)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

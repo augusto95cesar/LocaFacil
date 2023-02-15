@@ -1,0 +1,63 @@
+﻿@model IEnumerable<LocaFacilWeb.Models.Entity.Locacao>
+
+@{
+    ViewBag.Title = "Locacões";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Nova Locação", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Filme.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataAluguel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Devolução)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorDiaAluguel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalAluguel)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Filme.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataAluguel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Devolução)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorDiaAluguel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalAluguel)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
