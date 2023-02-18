@@ -4,9 +4,12 @@ using System.Net;
 using System.Web.Mvc;
 using LocaFacilWeb.Models.Entity;
 using LocaFacilWeb.Models.Repository;
+using LocaFacilWeb.Models.Helpers;
+using LocaFacilWeb.Models.Enums;
 
 namespace LocaFacilWeb.Controllers
 {
+    [CustomAuthorize(TipoUsuarios.Admin)]
     public class FilmesController : Controller
     {
         private LocaFacilContext db = new LocaFacilContext();

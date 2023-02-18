@@ -184,6 +184,7 @@
     <Compile Include="Models\Entity\Usuario.cs" />
     <Compile Include="Models\Enums\TipoFilmes.cs" />
     <Compile Include="Models\Enums\TipoUsuarios.cs" />
+    <Compile Include="Models\Helpers\CustomAuthorize.cs" />
     <Compile Include="Models\Repository\LocaFacilContext.cs" />
     <Compile Include="Models\ViewModels\Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
